@@ -1,14 +1,54 @@
+
 <!DOCTYPE html>
 <html lang= "en">
   <head>
     <meta charset= "utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
     <title>ES6 with Google Maps</title>
+
+
+
+    <style>
+    /*
+    Only using these styles to test out the map.
+    TODO: create SASS to provide styles.
+     */
+      #map {
+        height: 50%;
+        width: 50vw;
+        margin-left: 25%
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
   </head>
   <body>
     <header>
+      <h1>Google Maps</h1>
     </header>
     <main>
+
     </main>
+    <div id="map" ></div>
+
+    <!-- <script data-main="js/app" src="js/require.js"></script>
+    <script src="js/init.js"></script> -->
+    <script src="./js/mapOptions.js"></script>
+    <script src="./js/mapMethods.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
