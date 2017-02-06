@@ -97,3 +97,11 @@ gulp.task('watch', () => {
 });
 
 ```
+<br>
+
+To run this script, enter the following command in the terminal:
+```bash
+$ gulp watch
+```
+### **Note**:
+For this command to execute, `gulp` must be installed globally touse the `gulp` command.
