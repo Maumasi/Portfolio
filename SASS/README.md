@@ -27,7 +27,7 @@ The examples below will explain a concept in SASS then present an example of cod
 SASS uses `@import` to bring in styles. There is usually a single file that controls all imported files. Controlling the `@import` sequence is a good idea because if you're familiar with cascading styles in CSS you'll know that if you want to override a styling you have to declare it after the previous style to the given element. Keep in mind the this assumes that inheritance and specificity of the selector are not interfering with the cascading styles.
 <br>
 
-SASS files that are going to be imported must start with an `_` to tell SASS that this is an import file. An example of this would be `_base.sass` or `_reset.scss`
+SASS files that are going to be imported must start with an underscore (`_`) to tell SASS that this is an import file. An example of this would be `_base.sass` or `_reset.scss`
 <br>
 
 **Note:**
