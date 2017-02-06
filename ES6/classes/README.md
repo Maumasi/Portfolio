@@ -104,4 +104,4 @@ To run this script, enter the following command in the terminal:
 $ gulp watch
 ```
 ### **Note**:
-For this command to execute, `gulp` must be installed globally touse the `gulp` command.
+For this command to execute, `gulp` must be installed globally to use the `gulp` command.
