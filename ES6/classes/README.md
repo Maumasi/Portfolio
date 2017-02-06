@@ -55,9 +55,10 @@ class Developer extends Person  {
 
 ## Using Gulp with ES6
 [click here to learn how to install gulp.js](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+
 Gulp.js is a great development tool that is easy to learn and implement. <br>
 
-In this gulp example the ES6 file is being translated into ES5 Javascript then that ES5 file is being minified and that minified file is what is being requested in the index.html. The ES6 script is not immediately being minified after being translated just so we can have a chance to comb through it if it happens to contain an error after being translated to ES5.
+In this gulp example the ES6 file is being translated into ES5 Javascript then that ES5 file is being minified and that minified file is what is being requested in the index.html. The ES6 script is not immediately being minified after being translated just so we can have a chance to comb through it if it happens to contain an error after being translated to ES5. The ES5 file name will be the same name as the ES6 source file.
 <br>
 
 To use gulp you'll need Node installed and an up to date NPM. [Click here to install Node](https://nodejs.org/en/)<br>
