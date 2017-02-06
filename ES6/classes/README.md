@@ -5,6 +5,7 @@
 - [How to read this example](#user-content-how-to-read-this-example)
 - [ES6: Class code](#user-content-es6-class-code)
 - [Using Gulp with ES6](#user-content-using-gulp-with-es6)
+
 ---
 <br>
 
