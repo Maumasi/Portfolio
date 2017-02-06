@@ -2,15 +2,15 @@
 *[back to root directory](https://github.com/Maumasi/Portfolio/tree/master)*
 
 # ES6: Classes
+Here is a simple example of two ES6 classes. <br>
+In this example `Person` is the *Abstract Class* and `Developer` is the *Concrete Class*.
+
 - [How to read this example](#user-content-how-to-read-this-example)
 - [ES6: Class code](#user-content-es6-class-code)
 - [Using Gulp with ES6](#user-content-using-gulp-with-es6)
 
 ---
-<br>
 
-Here is a simple example of two ES6 classes. <br>
-In this example `Person` is the *Abstract Class* and `Developer` is the *Concrete Class*.
 <br>
 
 ## How to read this example
