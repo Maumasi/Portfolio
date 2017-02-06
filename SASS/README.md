@@ -57,6 +57,8 @@ SASS does not care if you are mixing `.sass` and `.scss` files. both can be impo
 // ====================
 @import './page/home'
 ```
+**Note:**
+Notice that you can either use single quotes or double quotes with SASS. In both cases, `'./page/home'` and `"./page/home"` are treated as the same.
 
 ---
 <br>
