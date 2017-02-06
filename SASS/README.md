@@ -31,7 +31,7 @@ SASS files that are going to be imported must start with an `_` to tell SASS tha
 **Note:**
 SASS does not care if you are mixing `.sass` and `.scss` files. both can be imported to the same file and it is still completely valid. this is great for front-end devs that are still learning SASS because they can just add an `s` to the beginning their CSS file extensions turning `.css` into `.scss` files. so they can still contribute with the rest of the front-end teams that are using SASS.
 
-```Javascript
+```ruby
 /* styles.sass */
 
 // Google fonts
@@ -64,7 +64,7 @@ SASS gives us a few way to create dynamic styles. One of them is call a mixin. T
 <br>
 
 **SCSS**
-```Javascript
+```ruby
 // define the mixin
 @mixin displayFont ($fontColor, $fontSize) {
   color: $fontColor;
@@ -81,7 +81,7 @@ h1 {
 ```
 
 **SASS**
-```Javascript
+```ruby
 // define the mixin
 =displayFont ($fontColor, $fontSize)
   color: $fontColor;
