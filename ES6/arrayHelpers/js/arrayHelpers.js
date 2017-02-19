@@ -1,1 +1,1 @@
-"use strict";!function(){console.log("array helpers")}();
+"use strict";function _toConsumableArray(n){if(Array.isArray(n)){for(var r=0,t=Array(n.length);r<n.length;r++)t[r]=n[r];return t}return Array.from(n)}!function(){function n(n){return"<p>"+n+"</p>"}function r(n){return[].concat(_toConsumableArray(n))}var t=document.getElementById("my-list"),e=t.getElementsByTagName("li"),i=r(e);i.forEach(function(r){var t=i.indexOf(r);r.innerHTML=n("This list item is in index position "+t)})}();
