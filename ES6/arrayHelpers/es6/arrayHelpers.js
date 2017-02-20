@@ -131,7 +131,6 @@
   console.log(employeeCheckListResponse(employee2));
   console.log(employeeCheckListResponse(employee3));
 
-
   // ====================== functions to aid in demo ===========================
   // wrap string in an HTML <p>
   function pTag (text) {
