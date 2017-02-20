@@ -63,3 +63,47 @@ Now that there is an array of unique elements in a new array this can be used to
 <br>
 
 ## ForEach
+This array method is probably to most versatile of the array helper methods. The `.forEach()` method doesn't return anything but with this method any operations can be performed on an array element.
+<br>
+
+Using the example array from before in the example below the `stockList()` function uses the `.forEach()` method to determine if an item in the array is in stock or out of stock and return a <li> with the appropriate response.
+```JavaScript
+// array of inventory item objects
+const inventory = [
+  { department: 'sports', item: 'Soccer ball', stockQty: 12 },
+  { department: 'jewelry', item: 'Diamond ring', stockQty: 3 },
+  { department: 'home', item: 'Shower curtains', stockQty: 0 },
+  { department: 'produce', item: 'Banana', stockQty: 0 },
+  { department: 'toys', item: 'RC car', stockQty: 4 },
+];
+
+// create a <li> using ES6's new template string
+function liTag(item) {
+  return `<li>${item}</li>`;
+}
+
+// capitalize the first letter in the string
+function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// function to append a <li> to a specified <ul>
+function stockList(array, ulElement) {
+  array.forEach((object) => {
+    // deconstruct properties from the array element
+    const { department, item, stockQty } = object;
+    let templateStringItem = ``;
+    let outOfStockItem = item;
+    if(stockQty) {
+      templateStringItem = `${capitalize(item)} can be found in the ${department} department`;
+    } else {
+      // make item plural if not already plural
+      if(item.slice(-1) !== 's') {
+        outOfStockItem = item + 's';
+      }
+      templateStringItem = `Sorry, ${outOfStockItem} are out of stock. See the ${department} department when this will be back in stock.`;
+    }
+    ulElement.innerHTML += liTag(templateStringItem);
+  });
+}
+```
