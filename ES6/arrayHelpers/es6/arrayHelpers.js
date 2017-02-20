@@ -8,7 +8,6 @@
   const forEachItemCollection = forEachList.getElementsByTagName('li');
 
   // example arrays
-  // turn the HTMLCollection from array-like to an actual array
   const forEachItems = HTMLCollectionToArray(forEachItemCollection);
   const inventory = [
     { department: 'sports', item: 'Soccor ball', stockQty: 12 },
@@ -17,6 +16,39 @@
     { department: 'produce', item: 'Banana', stockQty: 0 },
     { department: 'toys', item: 'RC car', stockQty: 4 },
   ];
+
+  const customers = [
+    { id: 1, table: 12, order: [1, 3, 6] },
+    { id: 2, table: 4, order: [7, 2, 4] },
+  ];
+  const menu = [
+    { id: 1, price: 0.99, item: 'coffee' },
+    { id: 2, price: 3.49, item: 'pancakes' },
+    { id: 3, price: 1.99, item: 'fruit bowl' },
+    { id: 4, price: 5.99, item: 'omelet' },
+    { id: 5, price: 1.99, item: 'eggs and ham' },
+    { id: 6, price: 1.99, item: 'biscuits and gravy' },
+    { id: 7, price: 0, item: 'water' },
+  ];
+
+  const employee1 = [
+    { status: 1, tast: 'do the dishes' },
+    { status: 1, tast: 'clean the counters' },
+    { status: 1, tast: 'mop the floors' },
+  ];
+
+  const employee2 = [
+    { status: 1, tast: 'do the dishes' },
+    { status: 1, tast: 'clean the counters' },
+    { status: 0, tast: 'mop the floors' },
+  ];
+
+  const employee3 = [
+    { status: 0, tast: 'do the dishes' },
+    { status: 0, tast: 'clean the counters' },
+    { status: 0, tast: 'mop the floors' },
+  ];
+
 
   // ====================== map example ====================================
   // pluck the department value from each object in the array to make a new array
@@ -38,14 +70,15 @@
   });
 
   // ====================== filter example ====================================
+  // filter items that are in stock
   const inStock = inventory.filter((item) => {
     return item.stockQty;
   });
-
+  // filter items that are out of stock
   const outOfStock = inventory.filter((item) => {
     return !item.stockQty;
   });
-
+  // append each item with a statement to it's respective <ul>
   stockList(inStock, filterInStockList);
   stockList(outOfStock, filterOutOfStockList);
 
@@ -53,15 +86,49 @@
 
 
   // ====================== find example ====================================
+  function getTableOrder(tableNumber) {
+    // find customer by table
+    const table = customers.find((customer) => {
+      return customer.table === tableNumber;
+    });
+    // make array of ordered items customer ordered
+    return table.order.map((order) => {
+      return menu.find((item) => {
+        return order === item.id;
+      });
+    });
+  }
+  // print out an array of ordered item objects by table
+  console.log(getTableOrder(4));
+
+  // ====================== every & some example ====================================
+  function employeeCheckListResponse(taskArray) {
+    let response;
+    // check if all tasks have a status code of 1
+    const allTasks = taskArray.every((task) => {
+      return task.status;
+    });
+    // check if some tasks have a status code of 1
+    const someTasks = taskArray.some((task) => {
+      return task.status;
+    });
+
+    if(allTasks) {
+      response = 'All done for the day!';
+    } else if(someTasks) {
+      response = 'Just a few things left!';
+    } else {
+      response = 'I haven\'t started yet'
+    }
+    return response;
+  }
+
+  console.log(employeeCheckListResponse(employee1));
+  console.log(employeeCheckListResponse(employee2));
+  console.log(employeeCheckListResponse(employee3));
 
 
-  // ====================== every example ====================================
-
-
-  // ====================== some example ====================================
-
-
-// ====================== functions ============================================
+  // ====================== functions ============================================
   // wrap string in an HTML <p>
   function pTag (text) {
     return `<p>${text}</p>`;
@@ -87,13 +154,23 @@
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  // 
+  // return an array of unique elements
+  function unique(array) {
+    let refArray = [];
+    array.forEach((element) => {
+      if(refArray.indexOf(element) === -1) {
+        refArray.push(element);
+      }
+    });
+    return refArray;
+  }
+
+  // for each element in the array make a <li> for it and append it to the <ul>
   function stockList(array, ulElement) {
     array.forEach((object) => {
       const { department, item, stockQty } = object;
       let templateStringItem = ``;
       let outOfStockItem = item;
-
       if(stockQty) {
         templateStringItem = `${capitalize(item)} can be found in the ${department} department`;
       } else {
@@ -103,7 +180,6 @@
         }
         templateStringItem = `Sorry, ${outOfStockItem} are out of stock. See the ${department} department when this will be back in stock.`;
       }
-
       ulElement.innerHTML += liTag(templateStringItem);
     });
   }
