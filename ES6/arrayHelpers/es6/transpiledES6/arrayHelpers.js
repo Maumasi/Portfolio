@@ -13,7 +13,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
   // example arrays
   var forEachItems = HTMLCollectionToArray(forEachItemCollection);
-  var inventory = [{ department: 'sports', item: 'Soccor ball', stockQty: 12 }, { department: 'jewelry', item: 'Diamond ring', stockQty: 3 }, { department: 'home', item: 'Shower curtains', stockQty: 0 }, { department: 'produce', item: 'Banana', stockQty: 0 }, { department: 'toys', item: 'RC car', stockQty: 4 }];
+  var inventory = [{ department: 'sports', item: 'Soccer ball', stockQty: 12 }, { department: 'jewelry', item: 'Diamond ring', stockQty: 3 }, { department: 'home', item: 'Shower curtains', stockQty: 0 }, { department: 'produce', item: 'Banana', stockQty: 0 }, { department: 'toys', item: 'RC car', stockQty: 4 }];
 
   var customers = [{ id: 1, table: 12, order: [1, 3, 6] }, { id: 2, table: 4, order: [7, 2, 4] }];
   var menu = [{ id: 1, price: 0.99, item: 'coffee' }, { id: 2, price: 3.49, item: 'pancakes' }, { id: 3, price: 1.99, item: 'fruit bowl' }, { id: 4, price: 5.99, item: 'omelet' }, { id: 5, price: 1.99, item: 'eggs and ham' }, { id: 6, price: 1.99, item: 'biscuits and gravy' }, { id: 7, price: 0.0, item: 'water' }];
@@ -72,6 +72,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
   // print out an array of ordered item objects by table
   console.log(getTableOrder(4));
 
+  // ====================== reduce example ====================================
   // use reduce to get the total price for the table's bill
   var tableOrder = getTableOrder(4);
   var bill = tableOrder.reduce(function (total, order) {

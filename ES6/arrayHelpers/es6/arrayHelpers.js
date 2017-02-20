@@ -10,7 +10,7 @@
   // example arrays
   const forEachItems = HTMLCollectionToArray(forEachItemCollection);
   const inventory = [
-    { department: 'sports', item: 'Soccor ball', stockQty: 12 },
+    { department: 'sports', item: 'Soccer ball', stockQty: 12 },
     { department: 'jewelry', item: 'Diamond ring', stockQty: 3 },
     { department: 'home', item: 'Shower curtains', stockQty: 0 },
     { department: 'produce', item: 'Banana', stockQty: 0 },
@@ -97,6 +97,7 @@
   // print out an array of ordered item objects by table
   console.log(getTableOrder(4));
 
+  // ====================== reduce example ====================================
   // use reduce to get the total price for the table's bill
   const tableOrder = getTableOrder(4);
   const bill = tableOrder.reduce((total, order) => {
