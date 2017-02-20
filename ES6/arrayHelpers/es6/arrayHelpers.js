@@ -28,7 +28,7 @@
     { id: 4, price: 5.99, item: 'omelet' },
     { id: 5, price: 1.99, item: 'eggs and ham' },
     { id: 6, price: 1.99, item: 'biscuits and gravy' },
-    { id: 7, price: 0, item: 'water' },
+    { id: 7, price: 0.0, item: 'water' },
   ];
 
   const employee1 = [
@@ -49,8 +49,7 @@
     { status: 0, tast: 'mop the floors' },
   ];
 
-
-  // ====================== map example ====================================
+  // ====================== map example ========================================
   // pluck the department value from each object in the array to make a new array
   const catagories = inventory.map((catagory) => {
     return catagory.department;
@@ -69,7 +68,7 @@
     item.innerHTML = pTag(`This list item is in index position ${position}`);
   });
 
-  // ====================== filter example ====================================
+  // ====================== filter example =====================================
   // filter items that are in stock
   const inStock = inventory.filter((item) => {
     return item.stockQty;
@@ -82,10 +81,7 @@
   stockList(inStock, filterInStockList);
   stockList(outOfStock, filterOutOfStockList);
 
-  // ====================== reduce example ====================================
-
-
-  // ====================== find example ====================================
+  // ====================== find example =======================================
   function getTableOrder(tableNumber) {
     // find customer by table
     const table = customers.find((customer) => {
@@ -101,7 +97,15 @@
   // print out an array of ordered item objects by table
   console.log(getTableOrder(4));
 
-  // ====================== every & some example ====================================
+  // use reduce to get the total price for the table's bill
+  const tableOrder = getTableOrder(4);
+  const bill = tableOrder.reduce((total, order) => {
+    return total += order.price;
+  }, 0);
+  // print out the total bill brfore tax
+  console.log(bill);
+
+  // ====================== every & some example ===============================
   function employeeCheckListResponse(taskArray) {
     let response;
     // check if all tasks have a status code of 1
@@ -128,7 +132,7 @@
   console.log(employeeCheckListResponse(employee3));
 
 
-  // ====================== functions ============================================
+  // ====================== functions to aid in demo ===========================
   // wrap string in an HTML <p>
   function pTag (text) {
     return `<p>${text}</p>`;
