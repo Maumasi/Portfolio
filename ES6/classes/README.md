@@ -14,6 +14,7 @@ In this example `Person` is the *Abstract Class* and `Developer` is the *Concret
 <br>
 
 ## How to read this example
+
 Treat this example as if this directory is the root. The only exception to treating this as the root are the `gulpfile.js` paths, as the `gulpfile.js` provides automation for all programing examples in this Portfolio.
 ---
 <br>

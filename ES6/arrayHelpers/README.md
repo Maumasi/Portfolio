@@ -8,12 +8,12 @@ These array helpers have been drafted onto ES5 because of their common use from 
 <br>
 
 ## Index
-- [Map]()
-- [ForEach]()
-- [Filter]()
-- [Find]()
-- [Reduce]()
-- [Some and Every]()
+- [Map](#user-content-map)
+- [ForEach](#user-content-foreach)
+- [Filter](#user-content-filter)
+- [Find](#user-content-find)
+- [Reduce](#user-content)
+- [Some and Every](#user-content-some-and-every)
 
 ---
 <br>
@@ -66,7 +66,7 @@ Now that there is an array of unique elements in a new array this can be used to
 This array method is probably to most versatile of the array helper methods. The `.forEach()` method doesn't return anything but with this method any operations can be performed on an array element.
 <br>
 
-Using the example array from before in the example below the `stockList()` function uses the `.forEach()` method to determine if an item in the array is in stock or out of stock and return a <li> with the appropriate response.
+Using the example array from before in the example below the `stockList()` function uses the `.forEach()` method to determine if an item in the array is in stock or out of stock and return a `<li>` with the appropriate response.
 ```JavaScript
 // array of inventory item objects
 const inventory = [
@@ -107,3 +107,104 @@ function stockList(array, ulElement) {
   });
 }
 ```
+**Note** <br>
+This is the only array method that does *NOT* require a `return`.
+---
+<br>
+
+## Filter
+Filter is a useful method to quickly sift through elements in an array to return only elements that match a conditional statement. Using an actual if statement to make a filter more verbose can also be done but it can make the block of code more complex to read than it needs to be.
+<br>
+
+Below is an example of the `.filter()` method in action. Using the `const inventory` from the first example we'll be making a couple new arrays. <br>
+
+The `const inStock` is a new array using the `.filter()` method to look for items that have a `stockQty` property that is greater than `0`. Remember that `0` is treated as `false`.<br>
+
+The `const outOfStock` is a new array using the `.filter()` method to look for items that have a `stockQty` property that is `0`. <br>
+```JavaScript
+const inventory = [
+  { department: 'sports', item: 'Soccer ball', stockQty: 12 },
+  { department: 'jewelry', item: 'Diamond ring', stockQty: 3 },
+  { department: 'home', item: 'Shower curtains', stockQty: 0 },
+  { department: 'produce', item: 'Banana', stockQty: 0 },
+  { department: 'toys', item: 'RC car', stockQty: 4 },
+];
+
+// filter items that are in stock
+const inStock = inventory.filter((item) => {
+  return item.stockQty;
+});
+
+// filter items that are out of stock
+const outOfStock = inventory.filter((item) => {
+  return !item.stockQty;
+});
+
+console.log(inStock);
+/*
+logs:
+[
+  { department: 'sports', item: 'Soccer ball', stockQty: 12 },
+  { department: 'jewelry', item: 'Diamond ring', stockQty: 3 },
+  { department: 'toys', item: 'RC car', stockQty: 4 }
+]
+*/
+
+console.log(outOfStock);
+/*
+logs:
+[
+  { department: 'home', item: 'Shower curtains', stockQty: 0 },
+  { department: 'produce', item: 'Banana', stockQty: 0 },
+]
+*/
+```
+
+---
+<br>
+
+## Find
+
+This array method returns an element that meets a conditional like the `.filter()` method above. The difference here is that this method will only return 1 element when the conditional is satisfied. Something to keep in mind is that if there are multiple elements in the array that meet the conditional statement the first one by order of index will be the one to be returned. It's worth noting that this will not return an array with a single element in it, but rather just the element it's self. <br>
+
+In the example below is using a restaurant setting. <br>
+The function uses the `.find()` method to look for a table number in the `const customers` array. Using the `.map()` method we create a new array of ordered menu items by finding every menu item by it's `id` property and return that new array from the function.
+
+```JavaScript
+const menu = [
+  { id: 1, price: 0.99, item: 'coffee' },
+  { id: 2, price: 3.49, item: 'pancakes' },
+  { id: 3, price: 1.99, item: 'fruit bowl' },
+  { id: 4, price: 5.99, item: 'omelet' },
+  { id: 5, price: 1.99, item: 'eggs and ham' },
+  { id: 6, price: 1.99, item: 'biscuits and gravy' },
+  { id: 7, price: 0.0, item: 'water' },
+];
+
+const customers = [
+  { id: 1, table: 12, order: [1, 3, 6] },
+  { id: 2, table: 4, order: [7, 2, 4] },
+];
+
+function getTableOrder(tableNumber) {
+  // find customer by table
+  const table = customers.find((customer) => {
+    return customer.table === tableNumber;
+  });
+  // make array of ordered items customer ordered
+  return table.order.map((order) => {
+    return menu.find((item) => {
+      return order === item.id;
+    });
+  });
+}
+// print out an array of ordered item objects for table number 4
+console.log(getTableOrder(4));
+```
+**Note** <br>
+Remember that the `.map()` method iterates over every element in the array, so even though the `.find()` method only returns only 1 element the `.map()` method is running the `.find()` method for every element in the `order` property which is an array.
+
+---
+<br>
+
+## Reduce
