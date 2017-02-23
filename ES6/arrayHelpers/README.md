@@ -211,8 +211,8 @@ Remember that the `.map()` method iterates over every element in the array, so e
 ## Reduce
 Reduce is kind of a weird one. This array method takes 2 parameters:
 
-- `param1`: initial value
-- `param2`: array
+- `param1`: initial value reference
+- `param2`: array element reference
 
 The syntax looks a little different because you'll have to set the initial value as the second value after the callback function in the `.reduce()` method then set the variable name in the `param1` position in the callback function. So, It would look like this:
 ```JavaScript
@@ -252,4 +252,63 @@ const bill = tableOrder.reduce((total, order) => {
 // print out the total bill before tax
 // logs: 9.48
 console.log(bill);
+```
+
+## Some and Every
+
+The `.some()` and `.every()` methods do similar things. Both methods only return a boolean based on a conditional. The difference is how either method returns a truthy boolean. <br>
+
+The `.some()` method only cares if one or more of the elements in the array meet the conditional statement. The `.every()` method cares the every single element in the array meet the conditional before it will return a truthy statement. <br>
+
+ Below the example has 3 employees that each have an array of tasks the have a corresponding status of `1` that represents that it's complete or `0` that represents that it's not finished. We'll build a function, `employeeCheckListResponse()`, that will test if every task is finished for the day or if only some of the tasks are finished and give an employee responce depending on the employee's completeness of tasks.
+
+```JavaScript
+const employee1 = [
+  { status: 1, task: 'do the dishes' },
+  { status: 1, task: 'clean the counters' },
+  { status: 1, task: 'mop the floors' },
+];
+
+const employee2 = [
+  { status: 1, task: 'do the dishes' },
+  { status: 1, task: 'clean the counters' },
+  { status: 0, task: 'mop the floors' },
+];
+
+const employee3 = [
+  { status: 0, task: 'do the dishes' },
+  { status: 0, task: 'clean the counters' },
+  { status: 0, task: 'mop the floors' },
+];
+
+function employeeCheckListResponse(taskArray) {
+  let response;
+  // check if all tasks have a status code of 1
+  const allTasks = taskArray.every((task) => {
+    return task.status;
+  });
+  // check if some tasks have a status code of 1
+  const someTasks = taskArray.some((task) => {
+    return task.status;
+  });
+
+  if(allTasks) {
+    response = 'All done for the day!';
+  } else if(someTasks) {
+    response = 'Just a few things left!';
+  } else {
+    response = 'I haven\'t started yet'
+  }
+  return response;
+}
+
+// logs: 'All done for the day!'
+console.log(employeeCheckListResponse(employee1));
+
+// logs: 'Just a few things left!'
+console.log(employeeCheckListResponse(employee2));
+
+// logs: 'I haven't started yet'
+console.log(employeeCheckListResponse(employee3));
+
 ```

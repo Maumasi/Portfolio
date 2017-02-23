@@ -32,21 +32,21 @@
   ];
 
   const employee1 = [
-    { status: 1, tast: 'do the dishes' },
-    { status: 1, tast: 'clean the counters' },
-    { status: 1, tast: 'mop the floors' },
+    { status: 1, task: 'do the dishes' },
+    { status: 1, task: 'clean the counters' },
+    { status: 1, task: 'mop the floors' },
   ];
 
   const employee2 = [
-    { status: 1, tast: 'do the dishes' },
-    { status: 1, tast: 'clean the counters' },
-    { status: 0, tast: 'mop the floors' },
+    { status: 1, task: 'do the dishes' },
+    { status: 1, task: 'clean the counters' },
+    { status: 0, task: 'mop the floors' },
   ];
 
   const employee3 = [
-    { status: 0, tast: 'do the dishes' },
-    { status: 0, tast: 'clean the counters' },
-    { status: 0, tast: 'mop the floors' },
+    { status: 0, task: 'do the dishes' },
+    { status: 0, task: 'clean the counters' },
+    { status: 0, task: 'mop the floors' },
   ];
 
   // ====================== map example ========================================
