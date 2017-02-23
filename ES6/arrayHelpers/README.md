@@ -211,10 +211,17 @@ Remember that the `.map()` method iterates over every element in the array, so e
 ## Reduce
 Reduce is kind of a weird one. This array method takes 2 parameters:
 
-- Parameter 1 `param1`: initial value
-- Parameter 2 `param2`: array
+- `param1`: initial value
+- `param2`: array
 
-The `param1` value is often set as `0` then incremented. Instead of incrementing `param1` for every element in the array, `param2`, we'll do something a little more practical. <br>
+The syntax looks a little different because you'll have to set the initial value as the second value after the callback function in the `.reduce()` method then set the variable name to `param1` in the callback function. So, It would look like this:
+```JavaScript
+array.reduce(callback(param1, arrayElement){ /* ...some logic... */ }, 0);
+// --------------------------------------------------------------------^  param1 initial value
+```
+<br>
+
+ The `param1` value is often set as `0` then incremented. Instead of incrementing `param1` for every element in the array, `param2`, we'll do something a little more practical. <br>
 
 In the example below we'll use the function we made above, `getTableOrder()`, to generate an array of ordered items and set it to `const tableOrder`. Using this new array we'll add up this table's total bill before taxes using the `.reduce()` method and set it to `const bill`.
 ```JavaScript
@@ -239,6 +246,7 @@ const tableOrder = getTableOrder(4);
 // use reduce to get the total price for the table's bill
 const bill = tableOrder.reduce((total, order) => {
   return total += order.price;
+// set initial value as the second parameter after the callback function
 }, 0);
 
 // print out the total bill before tax
