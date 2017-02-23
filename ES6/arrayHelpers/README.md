@@ -214,7 +214,7 @@ Reduce is kind of a weird one. This array method takes 2 parameters:
 - `param1`: initial value
 - `param2`: array
 
-The syntax looks a little different because you'll have to set the initial value as the second value after the callback function in the `.reduce()` method then set the variable name to `param1` in the callback function. So, It would look like this:
+The syntax looks a little different because you'll have to set the initial value as the second value after the callback function in the `.reduce()` method then set the variable name in the `param1` position in the callback function. So, It would look like this:
 ```JavaScript
 array.reduce(callback(param1, arrayElement){ /* ...some logic... */ }, 0);
 // --------------------------------------------------------------------^  param1 initial value
