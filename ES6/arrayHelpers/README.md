@@ -108,6 +108,7 @@ function stockList(array, ulElement) {
 }
 ```
 **Note** <br>
+
 This is the only array method that does *NOT* require a `return`.
 ---
 <br>
