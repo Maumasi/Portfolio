@@ -108,8 +108,8 @@ function stockList(array, ulElement) {
 }
 ```
 **Note** <br>
-
 This is the only array method that does *NOT* require a `return`.
+
 ---
 <br>
 
@@ -209,3 +209,39 @@ Remember that the `.map()` method iterates over every element in the array, so e
 <br>
 
 ## Reduce
+Reduce is kind of a weird one. This array method takes 2 parameters:
+
+- Parameter 1 `param1`: initial value
+- Parameter 2 `param2`: array
+
+The `param1` value is often set as `0` then incremented. Instead of incrementing `param1` for every element in the array, `param2`, we'll do something a little more practical. <br>
+
+In the example below we'll use the function we made above, `getTableOrder()`, to generate an array of ordered items and set it to `const tableOrder`. Using this new array we'll add up this table's total bill before taxes using the `.reduce()` method and set it to `const bill`.
+```JavaScript
+const menu = [
+  { id: 1, price: 0.99, item: 'coffee' },
+  { id: 2, price: 3.49, item: 'pancakes' },
+  { id: 3, price: 1.99, item: 'fruit bowl' },
+  { id: 4, price: 5.99, item: 'omelet' },
+  { id: 5, price: 1.99, item: 'eggs and ham' },
+  { id: 6, price: 1.99, item: 'biscuits and gravy' },
+  { id: 7, price: 0.0, item: 'water' },
+];
+
+const customers = [
+  { id: 1, table: 12, order: [1, 3, 6] },
+  { id: 2, table: 4, order: [7, 2, 4] },
+];
+
+// make array of ordered items for table 4
+const tableOrder = getTableOrder(4);
+
+// use reduce to get the total price for the table's bill
+const bill = tableOrder.reduce((total, order) => {
+  return total += order.price;
+}, 0);
+
+// print out the total bill before tax
+// logs: 9.48
+console.log(bill);
+```
