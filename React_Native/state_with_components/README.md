@@ -5,9 +5,9 @@
 This is a great segue to learn how properties can be passed between components across the entire app using a flux architecture. In this demo we'll just be looking at how using `state` we can pass data to components within the same class.
 
 **Note**
-This demo will not be going over how to start a React Native project or how to build components. There is a [Resources]() section at the end of this demo to aid in research not included here.
+This demo will not be going over how to start a React Native project or how to build components. There is a [Resources](#user-content-resources) section at the end of this demo to aid in research not included here.
 
-- [Resources]()
+- [Resources](#user-content-resources)
 
 ---
 <br>
@@ -113,18 +113,6 @@ class App extends Component {
 
 export default App;
 ```
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Resources
