@@ -15,7 +15,8 @@ This demo will not be going over how to start a React Native project or how to b
 The component below has been simplified a bit. The most important properties to take note of are:
 - `value`
 - `onChangeText`
-Properties, in React Native, are variables that will be passed in later after the component has been called somewhere else in the app. Right now they just need to be defined here in the *blueprint* of this component just like parameters would be in a function definition. <br>
+
+Properties represented here as `props`, are variables that will be passed in later after the component has been called somewhere else in the app. Right now they just need to be defined here in the *blueprint* of this component just like parameters would be in a function definition. <br>
 The `value` is what is actually typed in the input field. The `onChangeText` property expects a function and is called every time the user types in the `TextInput`.
 
 ```JavaScript
