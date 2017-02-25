@@ -3,6 +3,9 @@
 # PHP7 Spaceship Operator
 
 The spaceship operator in PHP7 is a bit different than other logic operator not just in the syntax but in the values returned from the operation.
+- `1` means the LEFT side of the equation is greater, `> == true`
+- `-1` means the RIGHT side of the equation is greater, `< == true`
+- `0` means both sides of the operation are equal
 <br>
 
 ```PHP
@@ -20,6 +23,9 @@ echo $num1 <=> $num2
 <br>
 
 This can be very helpful when creating custom sorting operations. In the example below of a custom sorting operation used with `usort()` can also be done with other built-in array helpers in PHP, this is just to illustrate a simple demo.
+<br>
+
+The `order()` function uses a parameter `$dir` that is defaulted to `1`, this just sets the direction of the order to lowest to highest. This can be reversed by setting `$dir` to `-1`.
 ```PHP
 // func to order arrays using the spaceship operator
 function order($left, $right, $dir = 1) {
@@ -41,7 +47,7 @@ usort($numArray, 'order');
 print_r($numArray);
 
 
-// order multi dementional array
+// order multidimensional array
 usort($farmAnimalGroups, 'order');
 print_r($farmAnimalGroups);
 ```
