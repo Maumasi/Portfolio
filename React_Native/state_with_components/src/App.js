@@ -7,23 +7,34 @@ import {
   Text,
   View
 } from 'react-native';
+import { Input, Header } from 'state_with_components/src/views/components/';
 
 class App extends Component {
+
+  state = {
+    input: '',
+  }
 
   // app view
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.ios.js
+          A simple demo on state with React Native
         </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+
+        <Input
+          label={'Demo'}
+          value={this.state.input}
+          placeholder={'Type to watch state change'}
+          onChangeText={(input) => {
+            this.setState({ input });
+          }}
+        />
+
+        <Header
+          title={this.state.input}
+        />
       </View>
     );
   }

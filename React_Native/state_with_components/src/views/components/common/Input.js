@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, View, TextInput } from 'react-native';
 
 // themes
-import themes from 'Bread_Crumbs/src/views/stylesheets/themes';
+import themes from 'state_with_components/src/views/stylesheets/themes';
 const { loginInput, boxShadow } = themes;
 
 const styles = {
@@ -31,7 +31,7 @@ const { wrapper, lableStyle, input } = styles;
 
 const Input = (props) => {
   const {
-    lable,
+    label,
     value,
     onChangeText,
     placeholder,
@@ -48,7 +48,7 @@ const Input = (props) => {
 
   return (
     <View style={ [loginInput, boxShadow, wrapper] }>
-      <Text style={ [input, textTheme] }>{ lable }</Text>
+      <Text style={ [input, textTheme] }>{ label }</Text>
       <TextInput
         placeholder={ placeholder }
         autoCorrect={ false }
