@@ -41,7 +41,59 @@ usort($numArray, 'order');
 print_r($numArray);
 
 
-// order multidimensional array
+// order multi dementional array
 usort($farmAnimalGroups, 'order');
 print_r($farmAnimalGroups);
+```
+<br>
+
+The above PHP will print out:
+```PHP
+Array
+(
+  [0] => 1
+  [1] => 1
+  [2] => 1.999
+  [3] => 3
+  [4] => 4
+  [5] => 7
+  [6] => 8
+  [7] => 9
+  [8] => 15
+  [9] => 23
+  [10] => 26
+  [11] => 46
+  [12] => 56
+  [13] => 67
+  [14] => 68
+  [15] => 89
+  [16] => 90
+)
+
+
+Array
+(
+  [0] => Array
+    (
+        [nothing] => 0
+    )
+
+  [1] => Array
+    (
+        [cow] => 73
+    )
+
+  [2] => Array
+    (
+        [hen] => 4
+        [horse] => 2
+    )
+
+  [3] => Array
+    (
+        [goat] => 1
+        [pig] => 123
+        [sheep] => 9
+    )
+)
 ```
