@@ -38,7 +38,8 @@ $numArray = [1, '90', 1.999, 9, 4, 23, 67, 3, 1, 56, 7, 89, 46, 68, 15, 26, 8];
 $farmAnimalGroups = [
   [hen => 4, horse => 2],
   [goat => 1, pig => 123, sheep => 9],
-  [cow => 73], [nothing => 0]
+  [cow => 73],
+  [nothing => 0]
 ];
 
 
