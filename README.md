@@ -10,9 +10,8 @@ This portfolio repository is meant to serve as a collection of code snippets tha
 
 Below are links to sections of this portfolio by subject.
 
-
-<br>
 ---
+<br>
 
 ## Index
 
