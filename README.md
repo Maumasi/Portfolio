@@ -3,8 +3,19 @@
 
 ---
 
-## How to use this Portfolio
+## About me
+I am a combat veteran that was part of one of the U.S. militaries primer fighting forces, an Airborne Army Ranger in the 75th Ranger Regiment with multiple tours of duty in special operations. Within the first 30 days of exiting the military I started at Full Sail University in the bachelors program for web design and development. <br>
 
+What interests me in web development in the first place is the fact that I can be as creative as I want to be. It’s satisfying to create something and even more so when I get to see others enjoy my work. Being able to build my own programs feels like having superpowers in the real world. <br>
+
+I consider my self a serial-learner. I like building my skills and abilities I’ve already attained and I’m always interested in diving into something new and with all the tools available to programmers today and growing there is always something new to learn. <br>
+
+This portfolio was designed to show small examples and demonstrations of just some of what I’ve been learning lately as well as some featured projects I had fun building. <br>
+
+
+<br>
+
+### How to use this Portfolio
 This portfolio repository is meant to serve as a collection of code snippets that provide useful examples of code in varied languages and concepts. These examples are also my personal notes, which will continue to grow, and also, it might by useful to others beginning to learn core concepts or use cases.
 <br>
 
