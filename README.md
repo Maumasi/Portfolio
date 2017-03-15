@@ -17,20 +17,25 @@ Below are links to sections of this portfolio by subject. <br>
 - [React Native](#user-content-react-native)
 - [SASS](#user-content-sass)
 - [PHP7](#user-content-php7)
+<br>
 
 # ES6
 The new release of JavaScript know either as ES6 or ES2015 has some cool new toys for JavaScript developers to play with and this section takes a took at some of the new features.
 - [ES6: Classes](https://github.com/Maumasi/Portfolio/tree/master/ES6/classes)
 - [ES6: Array Helpers](https://github.com/Maumasi/Portfolio/tree/master/ES6/arrayHelpers)
+<br>
 
 # React Native
 With mobile development becoming more and more in demand *React Native* leverages developers who already have the skill set to create web apps to be able to, now, create mobile apps. React Native compiles a large precent of ES6 JavaScript into the iOS and android mobile languages using only one source code for both platforms. It's like getting 2 developers for the price of one. That being said, not everything can be compiled into a platform's respective language using React Native, so this is not a perfect substitute for some apps that would require a native language solution.
 - [React Native: Manipulating State](https://github.com/Maumasi/Portfolio/tree/master/React_Native/state_with_components)
+<br>
 
 # SASS
 Finally, a clean way to develop CSS where specific component styles can be separated into individual styles without making a bazillion `<link>` tags. Writing SASS files makes creating, updating, removing, and overall maintenance of styles much less of a headache. This small demo demonstrates how to manage multiple files that handle styles for different components can be folded into 1 CSS file.
 - [SASS: Imports, Vars, Mixins, oh my!](https://github.com/Maumasi/Portfolio/tree/master/SASS)
+<br>
 
 # PHP7
 This new installation of PHP has given the language a real shot in the arm. PHP is not a fast executing language but with PHP7 it is about twice as fast as PHP5. Most methods and syntax that was deprecated from PHP7 was scheduled for removal in PHP5 that would otherwise issue a warning, so upgrading to PHP7 should be relatively simple. This code snippet demonstrated one of the new featuers of PHP7. **Note**: Even though the code may be easy to upgrade other software and hardware PHP7 is utilizing may not be as compatible, make sure it will work for your solution before attempting to implement a new version of any code base.
 - [PHP7: Spaceship operator](https://github.com/Maumasi/Portfolio/tree/master/PHP7/spaceshipOperator)
+<br>
