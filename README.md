@@ -39,3 +39,6 @@ Finally, a clean way to develop CSS where specific component styles can be separ
 This new installation of PHP has given the language a real shot in the arm. PHP is not a fast executing language but with PHP7 it is about twice as fast as PHP5. Most methods and syntax that was deprecated from PHP7 was scheduled for removal in PHP5 that would otherwise issue a warning, so upgrading to PHP7 should be relatively simple. This code snippet demonstrated one of the new featuers of PHP7. **Note**: Even though the code may be easy to upgrade other software and hardware PHP7 is utilizing may not be as compatible, make sure it will work for your solution before attempting to implement a new version of any code base.
 - [PHP7: Spaceship operator](https://github.com/Maumasi/Portfolio/tree/master/PHP7/spaceshipOperator)
 <br>
+
+# Featured Repos
+Below are some repositories I feel are worth making note of:
