@@ -68,6 +68,6 @@ This is a simple TODO app to demonstrates how to build an API using NodeJS with 
 
 <br>
 
-[Bread_Crumbs](https://github.com/Maumasi/Bread_Crumbs)
+### **[Bread_Crumbs](https://github.com/Maumasi/Bread_Crumbs)**
 **Built with React Native** <br>
 This app focuses on streaming data using Google's firebase, a real-time database. The app allows users to sign up to create Geo messages that would leave a "bread crumb" at a geo location so that other users can come across and discover the messages left behind. Messages would be limited to a specific range from the user's location. Users would also be able to save *favourited* messages they've come across. Users are encouraged to come up with their own games and uses for the app, like a treasure hunt game or an *I spy* game. I had a lot of fun building this app.
