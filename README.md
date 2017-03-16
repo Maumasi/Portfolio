@@ -54,8 +54,6 @@ This new installation of PHP has given the language a real shot in the arm. PHP 
 # Featured Repos
 Below are some repositories I feel are worth making note of:
 
-<br>
-
 ### **[Local Art](https://github.com/Maumasi/local_art)**
 **Built with PHP / Symfony 2.8 project | Web app** <br>
 The goal of this project is to be a place for art markets to be discovered by tourists, vacationers, or just locals that are just starting to look for markets in their area. Artists Venues can create an account. Venues can invite artists to their market groups and artists can accept or deny invitations. When visitors to the site look up cities, states or zip codes to discover a list of market places then go to a market's detail page. From the market's details page visitors can see and visit that market's artists and visit the artist's details page. Each artist then has a gallery of all the market groups they are apart of for visitors to discover even more markets.
