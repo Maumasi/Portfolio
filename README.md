@@ -4,7 +4,7 @@
 ---
 
 ## About me
-I am a combat veteran that was part of one of the U.S. militaries primer fighting forces, an Airborne Army Ranger in the 75th Ranger Regiment with multiple tours of duty in special operations. Within the first 30 days of exiting the military I started at Full Sail University in the bachelors program for web design and development. <br>
+I am a combat veteran that was part of one of the U.S. military primer fighting forces, an Airborne Army Ranger in the 75th Ranger Regiment with multiple tours of duty in special operations. Within the first 30 days of exiting the military I started at Full Sail University in the bachelors program for web design and development. <br>
 
 What interests me in web development in the first place is the fact that I can be as creative as I want to be. It’s satisfying to create something and even more so when I get to see others enjoy my work. Being able to build my own programs feels like having superpowers in the real world. <br>
 
@@ -53,3 +53,21 @@ This new installation of PHP has given the language a real shot in the arm. PHP 
 
 # Featured Repos
 Below are some repositories I feel are worth making note of:
+
+<br>
+
+### **[Local Art](https://github.com/Maumasi/local_art)**
+Built with PHP / Symfony 2.8 project <br>
+The goal of this project is to be a place for art markets to be discovered by tourists, vacationers, or just locals that are just starting to look for markets in their area. Artists Venues can create an account. Venues can invite artists to their market groups and artists can accept or deny invitations. When visitors to the site look up cities, states or zip codes to discover a list of market places then go to a market's detail page. From the market's details page visitors can see and visit that market's artists and visit the artist's details page. Each artist then has a gallery of all the market groups they are apart of for visitors to discover even more markets.
+
+<br>
+
+### **[TODO app using NodeJS, ExpressJS, MongoDB, as well as JSON Web Tokens](https://github.com/Maumasi/MEAN_2.0)**
+Built with NodeJS, ExpressJS, MongoDB, as well as JSON Web Tokens
+This is a simple todo app to demonstrates how to build an API using NodeJS with ExpressJS and using MongoDB as the database. When a user is created it also creates a JSON Web Token and sets it to a custom header to secure all relevant routes in the API. This app is also structured in a way that modularizes much of the code into manageable block to be easily maintainable over time.
+
+<br>
+
+[Bread_Crumbs](https://github.com/Maumasi/Bread_Crumbs)
+Built with React Native
+This app focuses on streaming data using Google's firebase, a real-time database. The app allows users to sign up to create Geo messages that would leave a "bread crumb" at a geo location so that other users can come across and discover the messages left behind. Messages would be limited to a specific range from the user's location. Users would also be able to save *favourited* messages they've come across. Users are encuraged to come up with their own games and uses for the app, like a treasure hunt game or an *I spy* game. I had a lot of fun building this app.
