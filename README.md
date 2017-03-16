@@ -37,7 +37,7 @@ The new release of JavaScript know either as ES6 or ES2015 has some cool new toy
 <br>
 
 # React Native
-With mobile development becoming more and more in demand *React Native* leverages developers who already have the skill set to create web apps to be able to, now, create mobile apps. React Native compiles a large precent of ES6 JavaScript into the iOS and android mobile languages using only one source code for both platforms. It's like getting 2 developers for the price of one. That being said, not everything can be compiled into a platform's respective language using React Native, so this is not a perfect substitute for some apps that would require a native language solution.
+With mobile development becoming more and more in demand *React Native* leverages developers who already have the skill set to create web apps to be able to, now, create mobile apps. React Native compiles a large percent of ES6 JavaScript into the iOS and android mobile languages using only one source code for both platforms. It's like getting 2 developers for the price of one. That being said, not everything can be compiled into a platform's respective language using React Native, so this is not a perfect substitute for some apps that would require a native language solution.
 - [React Native: Manipulating State](https://github.com/Maumasi/Portfolio/tree/master/React_Native/state_with_components)
 <br>
 
@@ -64,10 +64,10 @@ The goal of this project is to be a place for art markets to be discovered by to
 
 ### **[TODO app using NodeJS, ExpressJS, MongoDB, as well as JSON Web Tokens](https://github.com/Maumasi/MEAN_2.0)**
 Built with NodeJS, ExpressJS, MongoDB, as well as JSON Web Tokens
-This is a simple todo app to demonstrates how to build an API using NodeJS with ExpressJS and using MongoDB as the database. When a user is created it also creates a JSON Web Token and sets it to a custom header to secure all relevant routes in the API. This app is also structured in a way that modularizes much of the code into manageable block to be easily maintainable over time.
+This is a simple TODO app to demonstrates how to build an API using NodeJS with ExpressJS and using MongoDB as the database. When a user is created it also creates a JSON Web Token and sets it to a custom header to secure all relevant routes in the API. This app is also structured in a way that modularizes much of the code into manageable block to be easily maintainable over time.
 
 <br>
 
 [Bread_Crumbs](https://github.com/Maumasi/Bread_Crumbs)
 Built with React Native
-This app focuses on streaming data using Google's firebase, a real-time database. The app allows users to sign up to create Geo messages that would leave a "bread crumb" at a geo location so that other users can come across and discover the messages left behind. Messages would be limited to a specific range from the user's location. Users would also be able to save *favourited* messages they've come across. Users are encuraged to come up with their own games and uses for the app, like a treasure hunt game or an *I spy* game. I had a lot of fun building this app.
+This app focuses on streaming data using Google's firebase, a real-time database. The app allows users to sign up to create Geo messages that would leave a "bread crumb" at a geo location so that other users can come across and discover the messages left behind. Messages would be limited to a specific range from the user's location. Users would also be able to save *favourited* messages they've come across. Users are encouraged to come up with their own games and uses for the app, like a treasure hunt game or an *I spy* game. I had a lot of fun building this app.
